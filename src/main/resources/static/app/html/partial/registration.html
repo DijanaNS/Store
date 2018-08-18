@@ -1,0 +1,42 @@
+<div>
+	<div class="row">
+		<div class="col-md-3">
+			
+		</div>
+		<div class="col-md-6">
+			<div class="alert alert-success" role="alert" ng-if="show == true">
+  				Uspesno ste se registrovali! Mozete se prijaviti!
+			</div>
+			<div class="alert alert-warning" role="alert" ng-if="greska == true">
+  				Greska prilikom registrovanja, molimo ponovo unesite validne podatke!
+			</div>
+			<form>
+				<div class="form-group">
+					<label for="username">Korisnicko ime</label> 
+					<input type="text" class="form-control" id="username" placeholder="Korisnicko ime" aria-describedby="usernameHelp" ng-model="newUser.username"> 
+					<small id="usernameHelp" class="form-text text-muted">Unesite vase korisnicko ime ovde</small>
+				</div>
+				<div class="form-group">
+					<label for="email">Email address</label> 
+					<input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email" ng-model="newUser.email"> 
+					<small id="emailHelp" class="form-text text-muted">Email adresa nije javna</small>
+				</div>
+				<div class="form-group">
+					<label for="password">Password</label>
+					<input type="password" class="form-control" id="password" placeholder="Sifra" ng-model="newUser.password">
+				</div>
+				<div class="form-group">
+					<label for="passwordConf">Password</label>
+					<input type="password" class="form-control" id="passwordConf" placeholder="Ponovite sifru" ng-model="newUser.passwordConfirmation">
+				</div>
+				<button type="button" class="btn btn-primary" ng-click="register()">Registrujte se</button>
+			</form>
+			<br><br>
+		</div>
+		<div class="col-md-3">
+			
+		</div>
+	</div>
+</div>
+
+		

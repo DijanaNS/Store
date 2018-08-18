@@ -1,0 +1,52 @@
+<div>
+	<div class="row">
+		<div class="col-md-1">
+			
+		</div>
+		<div class="col-md-10">
+			<table class="table table-bordered table-striped" width="100%">
+				<thead>
+					<tr>
+						<td>Naziv knjige i autor</td>
+						<td>Kolicina</td>
+						<td>Cena/Kom</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="i in items">
+						<td>{{i.bookName}}</td>
+						<td>{{i.count}}</td>
+						<td>{{i.price}}</td>
+					</tr>
+					<!-- <tr>
+						<td>Datum narucivanja: {{cart.orderingDate}}</td>
+						<td>Status: {{cart.status}}</td>
+						<td>Cena: {{cart.totalPrice}}</td>
+					</tr> -->
+				</tbody>
+			</table>
+			<button type="button" class="btn btn-primary" ng-click="total()">Prikazi detalje narudzbine</button>
+			<table ng-if="showCard == true;" class="table table-bordered table-striped" width="100%">
+				<thead class="table table-bordered table-striped" width="100%">
+					<tr>
+						<th>Datum narucivanja</th>
+						<th>Status</th>
+						<th>Cena</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Datum narucivanja: {{cart.orderingDate}}</td>
+						<td>Status: {{cart.status}}</td>
+						<td>Cena: {{cart.totalPrice}}</td>
+					</tr>
+				</tbody>
+			</table>
+			<button type="button" class="btn btn-primary pull-right" ng-click="buy()">Zavrsi kupovinu</button>
+			<br><br>
+		</div>
+		<div class="col-md-1">
+			
+		</div>
+	</div>
+</div>

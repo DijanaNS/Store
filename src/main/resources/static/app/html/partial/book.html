@@ -1,0 +1,60 @@
+<div class="row">
+	<div class="col-md-3">
+		<div class="card text-white bg-danger mb-3" style="width: 18rem;">
+			<div class="card-header">
+			    Kategorije
+			</div>
+			<!-- <ul class="list-group list-group-flush text-dark" ng-repeat="c in categories">
+			    <li class="list-group-item"><a href ng-click="getBooksByCategory(c.id)">{{c.name}}</a></li>
+			</ul> -->
+			<ul class="list-group list-group-flush text-dark" ng-repeat="c in categories">
+			    <li class="list-group-item"><a href ng-click="getList(c.id)">{{c.name}}</a></li>
+			</ul>
+		</div>
+		
+	</div>
+	<div class="col-md-9">
+  		<div class="row">
+
+  			<div class="col-md-4">
+			      <img ng-src="{{book.imageUrl}}" title="{{book.title}}" class="w-100" />
+			</div>
+			<div class="col-md-4" style="text-align: left;">
+				<div class="alert alert-success" role="alert" ng-if="additem == true">
+  					Knjiga dodata u korpu!
+				</div>
+				<h4>{{book.author}}</h4>
+				<h3>{{book.title}}</h3>
+
+			    <p>Oblast: {{book.categoryName}}</p>
+			    <p>ISBN: {{book.isbn}}</p>
+			    <p>Format: {{book.format}}</p>
+			    <p>Izdavac: {{book.publisher}}</p>
+			    <p>Broj strana: {{book.pagesNumber}}</p>
+			    <p>Godina izdanja: {{book.year}}</p>
+			</div>
+			<div class="col-md-4 basket">
+				<div class="content">
+					<h3>Cena: {{book.price}} Din.</h3>
+					<br> <br>
+					<button type="button" class="btn btn-info"  ng-disabled="book.count == 0" ng-click="addToCart(book.id)">Dodaj u korpu</button>
+					<br>
+					<a href="#">Kako naruciti?</a>
+				</div>
+				
+				<div>
+					<br><br><br>
+					<p><button ng-click="change(book.id)" class="btn btn-outline-warning" ng-if="username == 'admin'"><i class="far fa-edit"></i>Izmeni</button></p>
+					<p><button ng-click="delete(book.id)" class="btn btn-outline-danger" ng-if="username == 'admin'"><i class="fas fa-trash" ></i>Obrisi</button></p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+			      <h2>Opis</h2>
+			      <p>{{book.description}}</p>
+			      
+			</div>
+  		</div>
+	</div>
+</div>

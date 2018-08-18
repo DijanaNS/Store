@@ -1,0 +1,44 @@
+<div class="row">
+	<div class="col-md-3">
+		<div class="card text-white bg-danger mb-3" style="width: 18rem;">
+			<div class="card-header">
+			    Kategorije
+			</div>
+			<!-- <ul class="list-group list-group-flush text-dark" ng-repeat="c in categories">
+			    <li class="list-group-item"><a href ng-click="getBooksByCategory(c.id)">{{c.name}}</a></li>
+			</ul> -->
+			<ul class="list-group list-group-flush text-dark" ng-repeat="c in categories">
+			    <li class="list-group-item"><a href ng-click="getList(c.id)">{{c.name}}</a></li>
+			</ul>
+		</div>
+		
+	</div>
+	<div class="col-md-9">
+		<!-- <div class="card-columns">
+ 			<div class="card h-100" ng-repeat="b in books">
+    			<img class="card-img-top" ng-src="{{b.imageUrl}}" alt="Card image cap">
+   				<div class="card-body">
+     				<h5 class="card-title">{{b.title}} - <i>{{b.author}}</i></h5>
+      				<p class="card-text">{{b.smallDescription}}</p>
+   				</div>
+				<div class="card-footer">
+				    <small class="text-muted"><button type="button" class="btn btn-info">Detalji</button> na sajtu: {{b.price}}</small>
+				</div>
+  			</div>
+  		</div> -->
+  		<div class="row">
+  			<div class="col-sm-4 py-2" ng-repeat="b in books">
+	            <div class="card h-100">
+	            	<img class="card-img-top" ng-src="{{b.imageUrl}}" alt="Card image cap">
+	                <div class="card-body">
+	                    <h5 class="card-title">{{b.title}} - <i>{{b.author}}</i></h5>
+      					<p class="card-text">{{b.smallDescription}}</p>
+	                </div>
+	                <div class="card-footer">
+				    	<small class="text-muted"><button type="button" class="btn btn-info" ng-click="detalji(b.id)">Detalji</button> na sajtu: {{b.price}}</small>
+					</div>
+	            </div>
+       		</div>
+  		</div>
+	</div>
+</div>
